@@ -1,0 +1,34 @@
+<!--Usa-se a tag <video scr = "link do video" controls> </video> -->
+- autoplay começa o vídeo automaticamente.
+- preload começa a carregar o vídeo (baixando, a barra branca do youtube)
+- é possível definir um tamanho do vídeo também por exemplo: width="520" height="440"
+- loop repete infinitamente, muted começa mutado.
+<video controls 
+    autoplay
+    loop
+    muted
+    poster = "alguma imagem de thumb" 
+    preload="auto">
+    <source src="20140621_195817.mp4" type = "video/mp4">
+
+</video>
+
+<!--Quer usar um vídeo do youtube? aperte em compartilhar no vídeo e em "incorporar" que forneçerá o código pronto"-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inserindo vídeo do Youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen></iframe>
+
+</body>
+</html>
