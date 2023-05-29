@@ -1,0 +1,117 @@
+<!--Para criar uma tabela com linhas e colunas usar a tag <table> </table>-->
+<table>
+    <!--a tag <tr></tr> é para criar uma linha da tabela-->
+    <tr>
+        <!--a tag <th></th> para designar a linha como cabeçalho, lembrar o "h" por headline-->
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Peso</th>
+    </tr>
+    <tr>
+        <!--a tag <td></td> para designar um item da linha como uma descrição do cabeçalho, 
+        lembrar "d" por description-->
+        <td>Maria</td>
+        <td>20</td>
+        <td>55</td>
+        <!--Note como cada item se encontra abaixo do respectivo item do cabeçalho-->
+    </tr>
+    <tr>
+        <td>Pedro</td>
+        <td>19</td>
+        <td>60</td>
+    </tr>
+</table>
+<br>
+
+<!--AGORA UMA TABELA COMPLEXA:-->
+<table>
+    <!--a tag <caption></caption> define a tabela, do que se trata-->
+    <caption>Poduzido vs Vendido por cada loja</caption>
+
+    <!--Agora vamos mudar a cor da tabela por loja, para ter maior clareza na separação dos dados-->
+    <colgroup>
+        <!--Pulamos a 1º coluna e agora vamos definir a cor do resto pelo atributo "style = background-color: cor"-->
+        <col>
+        <col span="2" style = "background-color: red;">
+        <col span="2" style = "background-color: blue;">
+    </colgroup>
+
+    <!--A tag <thead></thead> usada da mesma forma que head/body de toda estrutura html
+    usado para organizar o que ficará na parte de cima da tabela-->
+    <thead>
+        <tr>
+            <!--O atributo "rowspan = "nº de linhas"" ocupa espaços (em branco ou não) na tabela por linha-->
+            <!--Imagine blocos em branco para baixo-->
+            <th rowspan="2"></th>
+            <!--Porque eu fiz isso? pois, nessa coluna inicialmente vazia em que eu ocupei duas linhas em branco,
+            terá outros componentes na parte esquerda da tabela logo abaixo-->
+
+            <th colspan = "2">Loja Adidas</th>
+            <th colspan = "2">Loja Nike</th>
+            <!--Já o atributo "colspan = nº de colunas" designa quantas colunas aquele item vai ocupar na tabela-->
+
+            <!--Nesse caso por exemplo, utilizei para a loja Adidas e Nike tiverem logo abaixo as duas colunas
+            respectivas de Produzido e Vendido.-->
+        </tr>
+        <tr>
+            <th>Produzido</th>
+            <th>Vendido</th>
+            <th>Produzido</th>
+            <th>Vendido</th>
+        </tr>
+    </thead>
+    <!--<tbody></tbody> para a estrutura (parte de baixo) da tabela, abaixo do cabeçalho-->
+    <tbody>
+        <tr>
+            <th>Tênis</th>
+            <td>30</td>
+            <td>20</td>
+            <td>50</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <th>Blusas</th>
+            <td>40</td>
+            <td>20</td>
+            <td>60</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <th>Bolsas</th>
+            <td>20</td>
+            <td>10</td>
+            <td>80</td>
+            <td>60</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--Quer ajudar na acessibilidade e ter maior clareza da sua tabela/código? Defina as tags da tabela:-->
+<table>
+    <thead>
+        <tr>
+            <!--scope = "colgroup" header para um grupo (mais de um) de colunas-->
+            <th></th>
+            <th scope ="colgroup" colspan="2">Nike</th>
+            <th scope ="colgroup" colspan="2">Adidas</th>
+            <!--scope = "col" quando for uma header para apenas uma coluna-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!--scope = "row" quando for header para uma linha-->
+            <th scope = "row">Tênis</th>
+            <td>20</td>
+            <td>10</td>
+            <td>50</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <th>Blusas</th>
+            <td>40</td>
+            <td>20</td>
+            <td>90</td>
+            <td>70</td>
+        </tr>
+    </tbody>
+</table>

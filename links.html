@@ -1,0 +1,154 @@
+<!--LINKS: Representados pela tag <a> </a>-->
+<!--Possuem atributos globais e para direcionar a alguma coisa você utiliza "href =" + site/email/atalho entre aspas-->
+<p>
+    <a href="http://google.com">Google (nome atribuído ao link)</a>
+</p>
+
+<!--Quando for utilizado bloco de liks para navegação é recomendado utilizar a tag <nav> </nav>-->
+<nav>
+    <p>
+        <a href="http://google.com">Google</a>
+    </p>
+</nav>
+
+<!--ALGUMAS FUNÇÕES: -->
+<!--após a digitação do link, utilizar "download = " para invés de redirecionar, ser perguntado sobre o download
+do conteúdo posto após o href (img, pdf, txt, etc)-->
+<p>
+    <a href="image.png" download="Nome do Arquivo da imagem a ser salva">Imagem de flores</a>
+</p>
+
+<!--após a digitação do link, utilizar "target = " para invés de redirecionar na própria aba, é direcionado para 
+o link em outra aba, não perdendo a aba que o usuário estava presente -->
+<p>
+    <a href="http://google.com" target = "_blank">Acesse o Google aqui</a>
+</p>
+
+<!--Clicar em um link a partir de um título/parágrafo/imagem/etc? pode!-->
+<a href="http://google.com" title = "ir para o google">
+    <h1>Google</h1>
+    <p>Aqui leva pro google também</p>
+    <img src="https://source.unsplash.com/random" alt="">
+</a>
+
+<!--Redirecionar para o endereço (URL) de outro arquivo presente aqui: -->
+<a href="tagsBasicas.html" target = "_blank">Apenas escreva o nome do arquivo na mesma pasta</a>
+<br> <!--pula linha-->
+<a href="outraPastaFicticia/arquivo.html" target = "_blank">arquivo presente em outra pasta</a>
+<br>
+<a href="../outraPastaFicticia/arquivo.html" target = "_blank">para quando houver duas pastas (dois diretórios)
+    e a partir do arquivo de um deles, você desejar acessar o arquivo do outro (url), deve botar "../" antes
+</a>
+
+
+<!--PARA ONDE IREMOS AO CLICARMOS EM UM LINK?-->
+<!--Acessar algum URL:-->
+<br>
+<a href="http://google.com" target = "_blank">Google</a>
+
+<!--Enviar email: -->
+<a href="mailto:EmailDeAlguem@hotmail.com">Email para Contato</a>
+
+<!--Ligar para alguém diretamente: (ex:link de número exibido no google para ligar para algum estabelecimento)-->
+<a href="tel:+5581999990000">Telefone para Contato</a>
+
+<!--Fragmento: Usado como um atalho para o texto.
+
+    Ao clicar no link (palavra chave), a página desce até a parte 
+    da página/texto em que a palavra é citada/está relacionada-->
+
+    <!--SINTAXE: 
+    1 - Usar primeiramente a tag de link "<a href = "#exemplo">About</a>"" com a referência do texto desejado
+    com um jogo da velha (#), como no exemplo.
+    
+    2 - Depois escrever o texto da forma desejada, DENTRO DE SUA TAG deve ter o atributo "id = exemplo"
+    que a partir dele, estará linkando aquela parte da página a palavra de atalho dele-->
+
+<!--ex: Página Wikipedia com palavras chaves que quando é apertado irá até o parágrafo relacionado à ela-->
+<ul>
+    <h1>Segue atalhos para a parte do texto desejada:</h1>
+    <li><a href="#atalho">TEXTO 1</a></li>
+    <li><a href="#atalho2">TEXTO 2</a></li>
+    <li><a href="#atalho3">TEXTO 3</a></li>
+
+</ul>
+<h1 id ="atalho">TEXTO SOBRE FULANO</h1>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.  
+    Nam mattis, felis ut adipiscing
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. </p>
+
+<h1 id="atalho2">TEXTO SOBRE CICRANO</h1>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.   </p>
+
+<h1 id="atalho3">TEXTO SOBRE BELTRANO</h1>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam eget ligula eu lectus lobortis condimentum. 
+    Aliquam nonummy auctor massa. Pellentesque habitant 
+    morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+    Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus.  </p>

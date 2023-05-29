@@ -1,0 +1,119 @@
+<!-- para fazer um comentário, é preciso escrever "<!" seguido de dois tracinhos "--"-->
+
+<!-- atributos, atribuições dentro de uma tag unica, usados para info extras e configurações
+ex: imagens, <img src = "imagem.png" alt = "algo escrito aqui">
+ex atributos booleanos: <input type ="text" disabled> (verdadeiro ou falso, bloqueia atributo)-->
+
+<!-- UTILIZAR SEMPRE ASPAS DUPLAS NAS ATRIBUIÇÕES-->
+
+<p>
+<h1> <em> aqui botei em negrito um título </em></h1>
+</p>
+<p>
+<strong> <br/> Quer saber mais? </strong>
+<a href="https://www.google.com.br/">Acesse aqui (ao usuario apertar no que esta escrito aqui, redireciona ao link)</a>
+</p>
+
+<!-- AGORA VAMOS AO HTML NA PRÁTICA: 
+começamos usando essa nomeclatura para informar que estamos usando html p/ o navegador e a versão: -->
+<!doctype html>
+<!-- Depois continuamos com o esqueleto: -->
+<html>
+    <head>
+        informações importantes que o usuário não necessariamente visualiza
+        <title> Exibe o que vai estar escrito na aba do site </title>
+    </head>
+    <body>
+        <h1> Título em tamanho maior, quanto menor o número maior o título de h1 - h6 </h1>
+        <h6> teste título menor</h6>
+        <h2> teste título maior</h2>
+        o que o usuário visualiza
+        <p> texto</p>
+    </body>
+</html>
+
+<!-- INFO IMPORTANTE: ESCREVA APENAS "!" E APERTE ENTER QUE O VSCODE ESCREVE UM ESQUELETO PADRÃO DE HTML:-->
+<!DOCTYPE html>
+<html lang="en"> <!-- linguagem definida-->
+<head>
+    <meta charset="UTF-8"> <!-- Concede o maior número possível de caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> o que vai estar escrito na aba </title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- LISTAS (ordernadas ou não), no caso tópicos que nem uma lista de mercado
+Escreva a tag "li" e enter que será escrito a tag <li> </li>-->
+
+<!-- Dica: escreva uma tag qualquer e em seguida "*" "número qualquer" para imprimir a tag o número de vezes 
+daquele número escrito depois do vezes, ex: li*5 (escreve "<li> </li>" 5 vezes) -->
+
+<!-- Se quiser uma lista NÃO ODERNADA bote o conteúdo acima entre as tags <ul> </ul>-->
+<ul>
+    <h1> LISTA ABAIXO NÃO ORDENADA</h1>
+    <li>arroz</li>
+    <li>feijão</li>
+    <li>leite</li>
+</ul>
+
+<!-- Se quiser uma lista ORDENADA bote o conteúdo acima entre as tags <ol> </ol>-->
+<ol>
+    <h1> LISTA ABAIXO ORDENADA</h1>
+    <li>primeiro item aleatório</li>
+    <li>segundo item aleatório</li>
+</ol>
+
+<blockquote> usado para quotes, tem um enquadramento diferente </blockquote>
+<!--ABREVIAÇÕES: ao usuário passar o mouse em cima da palavra que está escrita antes do fechamento da tag do exemplo, 
+aparece abaixo uma descrição sobre a palavra/texto -->
+
+<!--Usa-se "abbr" e enter para a tag: <abbr title ="descrição">palavra/texto que mostrará descrição abaixo</abbr> <-->
+<p>
+    <abbr title="Hypertext Markup Language">HTML</abbr> é utilizado para o desenvolvimento web.
+</p>
+
+<!--Quer exibir uma imagem na página? use a tag <img src = "foto.png" alt = "Descrição">-->
+<img src="flores.jpg" alt="flores brancas">
+<!--Detalhe: a imagem deve estar inclusa no projeto/página (flores.png), o código não vai advinhar onde a foto está-->
+
+<!-- QUER INFORMAR QUE É VOCÊ QUE DESENVOLVEU A PÁGINA HTML? 
+então utilize a tag "address" para informar dados pessoais para pessoas que acessarem a página fonte-->
+<address>
+    <p><strong>Desenvolvedor: Marcelo Nunes<br></strong>
+    Recife, Pernambuco 
+    </p>
+</address>
+
+<!--LISTAS DE DESCRIÇÃO: forma organizada de tratar definições
+
+<dl></dl> = bloco incluindo tudo
+<dt></dt> = termo que será descrito
+<dd><dd> = descrição sobre a palavra acima
+-->
+<dl>
+    <dt><strong>Apartamento</strong></dt>
+    <dd>Complexo de habitações no qual abriga uma quantidade maior de pessoas por menor m2 do território.</dd>
+
+    <dt><strong>Translação</strong></dt>
+    <dd>Volta que a terra da em volta do sol no período de 365 dias.</dd>
+</dl>
+
+<!--FORMA DE REPRESENTAR UM CÓDIGO NO HTML-->
+<!--Quando for preciso demostrar o código com todos os espaços em branco, utilize:
+
+<pre> </pre> = bloco de código
+<code> </code> = código representado em si dentro da tag <pre>-->
+<pre>
+    <code>
+        <h5>Código de um título escrito de forma nua e crua incluindo as tags e 
+            espaçoes em branco, note que não foi utilizado quebra de linha
+        </h5>
+    </code>
+</pre>
+
+<div>Outra forma genérica de quebrar linha</div>
+<span>Mantém o texto em linha</span>
