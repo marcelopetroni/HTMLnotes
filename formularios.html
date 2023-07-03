@@ -18,7 +18,7 @@ são localizadas na rede através das URLs (Localizador Uniforme de Recursos), p
 <!-- E O HTPPS? -->
 - foi criado para garantir que a comunicação entre o PC e os servidores será criptografada.
 
-<!--ESTRUTURA-->
+<!--ESTRUTURA: Form -->
 - Um formulário é definido pela tag form, e seus atributos action e method:
 
 <form action="Onde esse formulário será submetido" method="A forma que será lidado com os dados: GET ou POST">
@@ -29,5 +29,99 @@ são localizadas na rede através das URLs (Localizador Uniforme de Recursos), p
 </form>
 
 - Não crie uma tag form dentro de outra tag form.
+
+<!--ESTRUTURA: Fieldset-->
+- fieldset é usado para agrupar elementos relacionados em um form.
+- Atributos: name = "algo" usado como tag para sua função e disabled para desativar aquela funcionalidade.
+- <legend></legend> primeira tag normalmente usada para ILUSTRAR uma legenda sobre aquela funcionalidade
+
+<form action="" method="POST">
+    <fieldset name = "input-contact">
+        <legend>Contato</legend>
+
+    </fieldset>
+</form>
+
+<!--ESTRUTURA: Label e Input-->
+- Input usado como campo de leitura, mais detalhes no tópico input.
+- Label usado para associar uma ou mais tags de entrada de dados como uma legenda ao lado do input. 
+tem o atributo for = "algo" usado para designar o input associado a ele através de uma id estabelecido no input.
+- Usado para acessibilidade
+
+<form action="" method="POST">
+    <fieldset name = "input-contact">
+        <legend>Contato</legend>
+
+        <label for="se o input tiver fora do fieldset e tiver um id, botar ele aqui">
+            Nome Completo
+        </label>
+        <input type="text">
+
+    </fieldset>
+</form>
+
+<!--ESTRUTURA: Button -->
+- Representa um botão com certas designações:
+  TYPE:
+  - submit: envia formulário
+  - reset: limpa formulário
+  Outros:
+  - autofocus (atributo booleano que especifica que o botão possuirá o foco de entrada assim que a página carrega)
+  - disabled (desabilita sua funcionalidade)
+  - name (tag do botão)
+  - value (valor inicial de um botão)
+
+
+  <form action="" method="POST">
+    <fieldset name = "input-contact">
+        <legend>Contato</legend>
+
+        <input type="text">
+        <button type="reset">Limpar</button>
+
+    </fieldset>
+</form>
+
+<!--ESTRUTURA: DataList -->
+- Sugere opções de input (que nem um calendário para especificar sua data de aniversário)
+onde é opcional escrever algo dentro se tiver linkado a um input de texto.
+- Funciona com outras coisas além de texto, como cores.
+
+<input type="text" list = "aniversarioDados" 
+placeholder="texto escrito de forma clarinha apenas ilustrativo para o usuário entender o que escrever">
+
+<datalist id = "aniversarioDados" >
+    <option>Janeiro</option>
+    <option>Fevereiro</option>
+    <option>Março</option>     
+</datalist>
+
+<!--ESTRUTURA: Input detalhes -->
+- Entrada de dados
+- Atributos: 
+
+name (nome do input para usar em outro momento da aplicação), id (tag)
+autofocus (onde o cursor irá iniciar inicialmente ao entrar na página)
+disabled (para desabilitar e não entra dados)
+
+type: text, password, number, email, url, tel, date, time, color, checkbox, radio, button, submit, reset.
+-> cada tipo é adaptado para se adequar ao formato estabelecido.
+
+autocomplete (procura dados no pc para completar o texto)
+required (para obrigar a preencher aquele campo)
+placeholder (texto em claro para ilustrar função do input)
+
+<form action="" method="POST">
+    <fieldset name = "input-contact">
+        <legend>Contato</legend>
+
+        <label for="se o input tiver fora do fieldset e tiver um id, botar ele aqui">
+            Senha
+        </label>
+        <input type="password">
+        <button type="reset">Enviar</button>
+    </fieldset>
+</form>
+
 
 
