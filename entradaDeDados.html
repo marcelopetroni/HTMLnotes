@@ -122,6 +122,7 @@ checked -> já vem com o checkbox marcado.
 </form>
 <!-- Aí no backend receberia "teste = banana, tomate" se os dois forem marcados-->
 
+
     input type = "hidden"
 - invisível ao usuário, será enviado como formulário.
 - pode ser usado para enviar alguma informação específica ou a hora por exemplo pro backend.
@@ -130,5 +131,71 @@ ex:
 <!--no backend será recebido como id= 10-->
 
 
+    input type = "radio"
+- Diferente do checkbox, seleciona apenas uma opção.
+- Atributos: value, checked
+ex:
+<form>
+    <fieldset>
+        <legend>Deseja fazer um empréstimo?</legend>
+            <label for="sim">Sim</label>
+            <input type="radio" name = "teste" id = "sim">
+            <label for="nao">Não</label>
+            <input type="radio" name = "teste" id = "nao">
+    </fieldset>
+</form>
+<!--No backend estará teste = sim ou teste = não-->
+
+    TEXTAREA
+- Para definir um campo de texto com mais de uma linha.
+- Atributos: placeholder, spellcheck, id, disabled/readonly, required, name, minlength/maxlength
+
+rowls e cols -> definir tamanho do campo.
+wrap -> O valor "hard" indica que o texto deve ser quebrado em linhas sempre que necessário.
+
+O valor "soft" (que é o valor padrão se não for especificado) indica que o texto deve ser quebrado em linhas 
+apenas nos pontos onde ocorrerem espaços em branco. Ou seja, não quebraria uma palavra ao meio quando chegasse no fim
+da coluna.
+
+<form><textarea name="teste" id="teste" cols="30" rows="10" wrap="hard"></textarea></form>
+
+    SELECT
+- Oferece um menu de opções, usado com <option></option>
+- Atributos: name, id, multiple, size
+
+<form action="">
+    <label for="carro">Qual modelo de carro?</label>
+    <select name="carro" id="carro">
+        <option value="">Selecione</option>
+        <option value="uno">Uno</option>
+        <option value="touro">Touro</option>
+        <option value="hb20">HB20</option>
+        <!--Use <optgroup> para ilustrar uma opção em negrito-->
+    </select>
+</form>
+
+    input type = "search"
+- Para campos de busca, parecido com o text, usado ao lado de button normalmente.
+- Atributos: list/datalist, size, pattern (pode especificar números/letras/etc)
+
+<form>
+    <input type="serach">
+    <button>Search</button>
+</form>
+
+    input type = "number"
+- Entrada de números apenas, pode aumentar/diminuit o número dentro do campo.
+- Atributos: datalist, disabled, etc
+
+min/max -> o número escrito mínimo e máximo.
+steap -> possibilita escolher um valor para aumentar/diminuir o número do campo.
+
+    input type = "range"
+- Slider para controlar valor númerico, tipo aumentar o som do spotify.
+- Atributos: min/max, step
+
+    input type = "date"
+- Selecionar data, tem variações dele como o time (para hora) month, week, datetime-local. 
+- value armazena valor do form.
 
 
