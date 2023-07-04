@@ -89,3 +89,46 @@ multiple -> para poder selcionar mais de um arquivo.
     multiple
     accept=".java, image/*"> <!--Botei para aceitar arquivos java e imagens quaisquer, podendo ser png/jpg-->
 </form>
+
+    input type = "color"
+- Para selecionar uma cor.
+- Atributos:
+value -> cor que já vem selecionada, por padrão é o preto.
+list -> linkar com datalist por id.
+
+
+    input type = "checkbox"
+- Caixas que podem ser marcadas ou desmarcadas.
+- Feitos ao lado de labels para ilustrar.
+
+value -> ao ser marcado, será enviado a checkbox como "on", mas pode ser especificado outro valor.
+checked -> já vem com o checkbox marcado.
+
+<!--Para marcar múltiplos valores?-->
+- Defina o mesmo atributo name entre os inputs, veja:
+
+<form>
+    <fieldset>
+        <legend>Mercado</legend>
+        <div>
+            <label for="banana">Banana</label>
+            <input type="checkbox" name = "teste" id = "banana">
+        </div>
+        <div>
+            <label for="tomate">Tomate</label>
+            <input type="checkbox" name = "teste" id = "tomate">
+        </div>
+    </fieldset>
+</form>
+<!-- Aí no backend receberia "teste = banana, tomate" se os dois forem marcados-->
+
+    input type = "hidden"
+- invisível ao usuário, será enviado como formulário.
+- pode ser usado para enviar alguma informação específica ou a hora por exemplo pro backend.
+ex:
+<input type="hidden" name = "id" value="10">
+<!--no backend será recebido como id= 10-->
+
+
+
+
