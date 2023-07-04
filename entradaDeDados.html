@@ -1,4 +1,4 @@
-<!--TAGS PARA ENTRADA DE DADOS -->
+<!--TAGS PARA ENTRADA DE DADOS DO INPUT -->
     input type = "password"
 - Esconde o que está sendo escrito no campo.
 - Atributos: 
@@ -20,3 +20,72 @@ inputmode = "numeric" para abrir teclado de números.
 
 autocomplete = "on" -> sugere se tiver uma senha salva para ser autopreenchido.
 autocomplete = "new-password" -> dependendo do navegador, sugere uma senha para autopreencher.
+
+    input type = "email"
+- irá validar se o valor for um email.
+- Atributos: placeholder, disabled/readonly, required, minlength/maxlength, value
+
+multiple -> permite escrever um ou mais emails por vírgula.
+size -> tamanho do campo, pensado pelo número de caracteres que pode ser escrito.
+
+pattern -> validação
+ex: pattern = ".+@exemplo\.com" -> sendo o ".+" o ponto (.) que representa qualquer caractere, exceto uma nova linha 
+e o mais (+) indica que o caractere anterior pode aparecer UMA ou mais vezes + "@exemplo" + "\." para aceitar o ponto 
+literalmente e não como um comando + "com".
+
+- use title para exibir mensagem que com as exigências da escrita do email.
+
+list = "id" -> para linkar com uma datalist por meio de sua id e sugerir opções de email:
+
+<form action="">
+    <fieldset>
+        <legend>Cadastro</legend>
+        <datalist id = "teste">
+            <option>azul@hotmail.com</option>
+            <option>vermelho@hotmail.com</option>
+            <option>verde@hotmail.com</option>
+        </datalist>
+        <label for="teste">Email</label> <!--Label precisa ser antes do input-->
+        <input type="email"
+        list = "teste"
+        placeholder="Escreva sua senha aqui">
+        <button>Enviar</button>
+    </fieldset>
+</form>
+
+    input type = "url"
+- irá validar se o valor for uma url.
+- Atributos: placeholder, disabled/readonly, required, minlength/maxlength, size, list
+
+value -> texto pronto como sugestão já escrito no campo.
+
+pattern -> validação.
+ex: pattern = ".*\.com.*" onde ".*" o ponto (.) representa qualquer caractere, exceto uma nova linha e o asterisco (*) 
+indica que o caractere anterior pode aparecer zero ou mais vezes.
+
+"\." para aceitar o ponto literalmente e não como um significado diferente.
+"com" o que normalmente tem nas urls podendo ter ou não "\.br" sem seguida.
+
+".*" no final caso tenha algum diretorio extra como "/discover/curso".
+
+spellcheck -> verificação ortográfica para aquele input.
+
+    input type = "file"
+- irá pedir para seelecionar um arquivo.
+- usa a notação "enctype="multipart/form-data" dentro da tag form para poder enviar arquivo.
+- Atributos:
+
+value -> representa o path do arquivo selecionado.
+
+accept-> para apenas aceitar e ilustrar arquivos de certo tipo, 
+exemplo:    accept = "image/*"  accept = "image/png" accept = ".png"  
+            accept = "video/*"  accept = ".html"
+
+multiple -> para poder selcionar mais de um arquivo.
+
+<form>
+    <label>Arquivo</label>
+    <input type="file"
+    multiple
+    accept=".java, image/*"> <!--Botei para aceitar arquivos java e imagens quaisquer, podendo ser png/jpg-->
+</form>
