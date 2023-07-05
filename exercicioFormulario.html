@@ -1,0 +1,28 @@
+<form action="" method="post">
+    <fieldset>
+        <legend>Contato</legend>
+        <div>
+            <label for="nome">Nome</label>
+            <br> <!--Quebra de linha-->
+            <input type="text" id="nome" name="nome"
+            required pattern="[A-Za-z] {*}" minlength="2" maxlength="100"
+            placeholder="Escreva seu nome.">
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" name="email"
+            required pattern=".+@.+\.com.*" minlength="7" maxlength="100"
+            placeholder="Escreva seu e-mail.">
+        </div>
+
+        <div>
+            <label for="mensagem">Mensagem</label>
+            <br>
+            <textarea name="mensagem" id="mensagem" cols="20" rows="8" placeholder="Escreva uma mensagem."></textarea>
+        </div>
+        <button>Enviar</button>
+    </fieldset>
+
+</form>

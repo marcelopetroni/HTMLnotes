@@ -1,5 +1,6 @@
 <!--TAGS PARA ENTRADA DE DADOS DO INPUT -->
-    input type = "password"
+
+    <!--input type = "password"-->
 - Esconde o que está sendo escrito no campo.
 - Atributos: 
 
@@ -21,7 +22,7 @@ inputmode = "numeric" para abrir teclado de números.
 autocomplete = "on" -> sugere se tiver uma senha salva para ser autopreenchido.
 autocomplete = "new-password" -> dependendo do navegador, sugere uma senha para autopreencher.
 
-    input type = "email"
+    <!--input type = "email"-->
 - irá validar se o valor for um email.
 - Atributos: placeholder, disabled/readonly, required, minlength/maxlength, value
 
@@ -53,7 +54,7 @@ list = "id" -> para linkar com uma datalist por meio de sua id e sugerir opçõe
     </fieldset>
 </form>
 
-    input type = "url"
+    <!--input type = "url"-->
 - irá validar se o valor for uma url.
 - Atributos: placeholder, disabled/readonly, required, minlength/maxlength, size, list
 
@@ -70,7 +71,7 @@ indica que o caractere anterior pode aparecer zero ou mais vezes.
 
 spellcheck -> verificação ortográfica para aquele input.
 
-    input type = "file"
+    <!--input type = "file"-->
 - irá pedir para seelecionar um arquivo.
 - usa a notação "enctype="multipart/form-data" dentro da tag form para poder enviar arquivo.
 - Atributos:
@@ -90,14 +91,14 @@ multiple -> para poder selcionar mais de um arquivo.
     accept=".java, image/*"> <!--Botei para aceitar arquivos java e imagens quaisquer, podendo ser png/jpg-->
 </form>
 
-    input type = "color"
+    <!--input type = "color"-->
 - Para selecionar uma cor.
 - Atributos:
 value -> cor que já vem selecionada, por padrão é o preto.
 list -> linkar com datalist por id.
 
 
-    input type = "checkbox"
+    <!--input type = "checkbox"-->
 - Caixas que podem ser marcadas ou desmarcadas.
 - Feitos ao lado de labels para ilustrar.
 
@@ -123,7 +124,7 @@ checked -> já vem com o checkbox marcado.
 <!-- Aí no backend receberia "teste = banana, tomate" se os dois forem marcados-->
 
 
-    input type = "hidden"
+    <!--input type = "hidden"-->
 - invisível ao usuário, será enviado como formulário.
 - pode ser usado para enviar alguma informação específica ou a hora por exemplo pro backend.
 ex:
@@ -131,7 +132,7 @@ ex:
 <!--no backend será recebido como id= 10-->
 
 
-    input type = "radio"
+    <!--input type = "radio"-->
 - Diferente do checkbox, seleciona apenas uma opção.
 - Atributos: value, checked
 ex:
@@ -146,7 +147,7 @@ ex:
 </form>
 <!--No backend estará teste = sim ou teste = não-->
 
-    TEXTAREA
+    <!--TEXTAREA-->
 - Para definir um campo de texto com mais de uma linha.
 - Atributos: placeholder, spellcheck, id, disabled/readonly, required, name, minlength/maxlength
 
@@ -159,7 +160,7 @@ da coluna.
 
 <form><textarea name="teste" id="teste" cols="30" rows="10" wrap="hard"></textarea></form>
 
-    SELECT
+    <!--SELECT-->
 - Oferece um menu de opções, usado com <option></option>
 - Atributos: name, id, multiple, size
 
@@ -174,7 +175,7 @@ da coluna.
     </select>
 </form>
 
-    input type = "search"
+    <!--input type = "search"-->
 - Para campos de busca, parecido com o text, usado ao lado de button normalmente.
 - Atributos: list/datalist, size, pattern (pode especificar números/letras/etc)
 
@@ -183,18 +184,18 @@ da coluna.
     <button>Search</button>
 </form>
 
-    input type = "number"
+    <!--input type = "number"-->
 - Entrada de números apenas, pode aumentar/diminuit o número dentro do campo.
 - Atributos: datalist, disabled, etc
 
 min/max -> o número escrito mínimo e máximo.
 steap -> possibilita escolher um valor para aumentar/diminuir o número do campo.
 
-    input type = "range"
+    <!--input type = "range"-->
 - Slider para controlar valor númerico, tipo aumentar o som do spotify.
 - Atributos: min/max, step
 
-    input type = "date"
+    <!--input type = "date"-->
 - Selecionar data, tem variações dele como o time (para hora) month, week, datetime-local. 
 - value armazena valor do form.
 
