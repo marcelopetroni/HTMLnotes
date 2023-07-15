@@ -1,0 +1,76 @@
+<!-- ESTRUTURA PADRÃO DE UM SITE EM HTML-->
+
+Cabeçalho <header> :
+    O cabeçalho do nosso site, o local onde geralmente fica a logo e o menu.
+    
+Navegação <nav> :
+    A navegação do site vai oferecer links para seções do site, o nosso menu. costuma ficar dentro da header, 
+    porém pode ficar em outros lugares, como em uma parte lateral, ou na parte de baixo.
+    
+Conteúdo principal <main> :
+    A parte do site aonde vai o conteúdo principal, no caso de um blog, teremos vários artigos, vários posts.
+    
+Conteúdo relacionado <aside>:
+    O conteúdo relacionado é algo que seja relacionado levemente ao nosso conteúdo principal, 
+    porém não tanto para ficar lá, como explicações do conteúdo, glossários, links extras, informações de perfil e etc.
+    
+Rodapé <footer>
+    Onde ficam as informações da parte de baixo da página, ela fica no final da página.
+
+    Exemplo básico de como ficaria um HTML semântico:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        logomarca
+
+        <nav>
+            <ul>
+                <li>item</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        conteúdo principal
+    </main>
+
+    <aside>
+        parte lateral
+    </aside>
+
+    <footer>rodapé</footer>
+
+</body>
+</html>
+
+<!--Para melhor posicionar e estilizar utilizamos CSS-->
+
+TAG ARTICLE:
+<!--A tag article vai criar blocos de conteúdos relacionados-->
+<!--Se o assunto do site for por exemplo receita, é recomendado botar os conteúdos dentro de um <article>-->
+
+<article>
+    <h2>Receita de torta de maçã</h2>
+    <p>Essa é uma receita de torta de maçã</p>
+</article>
+
+<article>
+    <h2>Receita de torta de limão</h2>
+    <p>Essa é uma receita de torta de maçã</p>
+</article>
+
+TAG SECTION 
+<!-- Para separar em seções, geralmente se coloca um título e conteúdo na tag section. Antigamente usava-se uma 
+div para fazer essas divisões e seções de conteúdos, mas semanticamente é mais apropriado usar uma tag section-->
+
+- A tag section pode ser usada dentro de um article
+
+TAG SPAN 
+<!--É um elemento de uso genêrico, ele pode ser usado para agrupar elementos para fins de estilo-->
